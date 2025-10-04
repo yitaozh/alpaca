@@ -27,6 +27,7 @@ ENV/
 *.pyd
 *.swp
 *.tmp
+.state/
 
 # mypy / pytest / coverage
 .mypy_cache/

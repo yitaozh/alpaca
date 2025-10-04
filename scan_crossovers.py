@@ -22,11 +22,11 @@ def fetch_bars_df(api: REST, symbol: str, n_trading_days: int, feed: str = "iex"
     end_date = dt.date.today()
     start_date = end_date - dt.timedelta(days=n_trading_days)
     df = api.get_bars(
-        symbol, 
+        symbol,
         TimeFrame.Day,
-        start_date.strftime("%Y-%m-%d"), 
+        start_date.strftime("%Y-%m-%d"),
         end_date.strftime("%Y-%m-%d"),
-        adjustment="raw", 
+        adjustment="raw",
         feed=feed
     ).df
     return df
